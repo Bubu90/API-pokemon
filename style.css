@@ -1,22 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
 
-/* .card {
-    width: 190px;
-    height: 254px;
-    background: white;
-    border-radius: 10px;
-    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
-    0 0  0 2px rgb(190, 190, 190),
-    0.3em 0.3em 1em rgba(0,0,0,0.3);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-   } */
-   
    .font{
-    font-family:'Kanit', cursive;
+    font-family:'Oswald', cursive;
 
    }
 
@@ -26,11 +13,17 @@
    }
    
    .flip-card {
+    transform: translateY(50px); 
+    transition: opacity 2s, transform 2s;
     background-color: transparent;
     width: 190px;
     height: 300px;
     perspective: 1000px;
     font-family: sans-serif;
+  }
+  .card.appear {
+    opacity: 1;
+    transform: translateY(0); 
   }
   
   .title {
@@ -67,15 +60,14 @@
     border-radius: 1rem;
   }
   
-  /* .flip-card-front {
+  .flip-card-front {
     background: linear-gradient(120deg, rgb(251, 251, 251) 60%, rgb(255, 231, 222) 88%,
-       rgb(255, 211, 195) 40%, rgba(81, 128, 178, 0.979) 48%);
+       rgb(255, 211, 195) 40%, #FFCC01 48%);
     color: rgb(8, 0, 0);
-  } */
+  }
   
   .flip-card-back {
-    /* background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.32816876750700286) 0%, rgba(190,79,28,0.5466561624649859) 42%); */
+  
     transform: rotateY(180deg);
   }
 
@@ -92,7 +84,7 @@
     text-align: center;
     background: rgb(0,0,0);
     background: rgb(0,0,0);
-    background: linear-gradient(4deg, rgba(0,0,0,0.32816876750700286) 0%, rgba(255, 255, 255, 0.791) 90%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.5634628851540616) 3%, rgba(0,0,0,0.3477766106442577) 25%, rgba(255,255,255,0.4822303921568627) 59%, rgba(255,255,255,0) 76%);
    }
 
    .card__info2 {
@@ -105,7 +97,7 @@
     text-align: center;
     background: rgb(0,0,0);
     background: rgb(0,0,0);
-    background: linear-gradient(4deg, rgba(0,0,0,0.32816876750700286) 0%, rgba(255,255,255,0) 76%);
+    background:linear-gradient(180deg, rgba(0,0,0,0.5634628851540616) 3%, rgba(0,0,0,0.3477766106442577) 25%, rgba(255,255,255,0.4822303921568627) 59%, rgba(255,255,255,0) 76%);
    }
 
    .card2 {
@@ -116,8 +108,7 @@
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    background:  linear-gradient(175deg, rgba(0,0,0,0.32816876750700286) 0%, rgba(237,6,6,0.5970763305322129) 76%);
-    /* box-shadow: 1px 1px 10px #bebebe,
-                  -1px -1px 10px #010000; */
+    background:  linear-gradient(0deg, rgba(0,104,174,1) 93%, rgba(255,255,255,0.9780287114845938) 100%);
+   
     color: aliceblue;
    }

@@ -1,5 +1,5 @@
 
-axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+axios.get('https://pokeapi.co/api/v2/pokemon?limit=5&offset=0')
 .then(function (response) {
   let pokemon = response.data.results;
   let WrapCard = document.querySelector('#WrapCard');
@@ -24,7 +24,7 @@ axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
           <h3 class="text-capitalize">${data.name}</h3>
           <p>Altezza: ${data.height} cm</p>
           <p>Peso: ${data.weight} kg</p>
-          <p>Specie: ${data.species.name} cm</p>
+          <p>Specie: ${data.types[0].type.name} cm</p>
           </div>
           </div>
           <div class="flip-card-back align-items-center font">
@@ -49,6 +49,9 @@ axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
       
       `;
       WrapCard.appendChild(card);
+     
+
+
     });
   });
   
