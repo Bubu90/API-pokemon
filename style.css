@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500;600;700&display=swap');
 
 
    .font{
@@ -21,10 +21,7 @@
     perspective: 1000px;
     font-family: sans-serif;
   }
-  .card.appear {
-    opacity: 1;
-    transform: translateY(0); 
-  }
+ 
   
   .title {
     font-size: 1.5em;

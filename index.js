@@ -1,8 +1,11 @@
 
-axios.get('https://pokeapi.co/api/v2/pokemon?limit=5&offset=0')
+axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
 .then(function (response) {
   let pokemon = response.data.results;
   let WrapCard = document.querySelector('#WrapCard');
+
+  
+     
   
   pokemon.forEach(element => {
     axios.get(element.url)
@@ -20,41 +23,30 @@ axios.get('https://pokeapi.co/api/v2/pokemon?limit=5&offset=0')
           <div class="card__info img-fluid ">
           <img src="${data.sprites.front_default}" alt="${data.name}" />
           </div>
-          <div class="card2">
-          <h3 class="text-capitalize">${data.name}</h3>
-          <p>Altezza: ${data.height} cm</p>
-          <p>Peso: ${data.weight} kg</p>
-          <p>Specie: ${data.types[0].type.name} cm</p>
+          <div class="card2 ">
+          <h3 class=" mt-3 text-capitalize ">${data.name}</h3>
+          <p>Specie: ${data.types[0].type.name} </p>
           </div>
           </div>
-          <div class="flip-card-back align-items-center font">
-          <h3 class="text-capitalize">${data.name}</h3>
-          ${data.abilities[0] ? `<p>Abilità: ${data.abilities[0].ability.name}</p>` : ''}
-          ${data.abilities[1] ? `<p>Abilità: ${data.abilities[1].ability.name}</p>` : ''}
-          ${data.abilities[2] ? `<p>Abilità: ${data.abilities[2].ability.name}</p>` : ''}
-          ${data.abilities[3] ? `<p>Abilità: ${data.abilities[2].ability.name}</p>` : ''}
+          <div class="flip-card-back align-items-center font "card__info  card2">
           <div class="card__info2 img-fluid ">
           <img src="${data.sprites.front_shiny }"> </img>
                   </div>
+          <div class="card2 ">
+        
+          <p class="mt-5">Altezza: ${data.height} cm</p>
+          <p>Peso: ${data.weight} kg</p>
+         
+          </div>
           </div>
       </div>
   </div>
       
-      
-     
-      
-      
-      
-      
-      
-      `;
+  `;
       WrapCard.appendChild(card);
-     
-
 
     });
   });
-  
  
 })
 .catch(function (error) {
