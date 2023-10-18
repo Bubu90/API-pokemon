@@ -2,27 +2,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500;600;700&display=swap');
 
 
-   .font{
-    font-family:'Oswald', cursive;
 
-   }
-
-   .logo{
-    width: 30%;
-    
-   }
-   
-   .flip-card {
-    transform: translateY(50px); 
-    transition: opacity 2s, transform 2s;
-    background-color: transparent;
-    width: 190px;
-    height: 300px;
-    perspective: 1000px;
-    font-family: sans-serif;
-  }
- 
+.font{
+  font-family:'Oswald', cursive;
   
+}
+
+.logo{
+  width: 30%;
+  
+}
+
+.flip-card {
+  transform: translateY(50px); 
+  transition: opacity 2s, transform 2s;
+  background-color: transparent;
+  width: 190px;
+  height: 300px;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.rotate-vert-center {
+	-webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
   .title {
     font-size: 1.5em;
     font-weight: 900;

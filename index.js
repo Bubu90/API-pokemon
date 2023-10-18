@@ -1,26 +1,21 @@
 
-axios.get('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
+axios.get('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0')
 .then(function (response) {
+  console.log(response)
   let pokemon = response.data.results;
   let WrapCard = document.querySelector('#WrapCard');
 
-  
-     
-  
   pokemon.forEach(element => {
     axios.get(element.url)
     .then(function (response2){
       let data = response2.data; 
-      console.log(data)
       let card = document.createElement('div');
       card.classList.add('p-3','col-12','col-md-2','text-center','justify-content-center','d-flex');
       card.innerHTML = `
-     
-      
-      <div class="flip-card">
-      <div class="flip-card-inner">
+      <div class="flip-card rotate-vert-center ">
+      <div class="flip-card-inner ">
           <div class="flip-card-front font align-items-center ">
-          <div class="card__info img-fluid ">
+          <div class="card__info img-fluid  ">
           <img src="${data.sprites.front_default}" alt="${data.name}" />
           </div>
           <div class="card2 ">
